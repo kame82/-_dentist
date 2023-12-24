@@ -1,5 +1,40 @@
 @use "../global" as *;
 
 .p-nav {
- // スタイルをここに記述
+  // スタイルをここに記述
+}
+
+.p-nav__inner {
+  margin-top: rm(54);
+  color: $color-white;
+}
+.p-nav__list {
+  padding-inline: rm(40);
+}
+.p-nav__item {
+  border-top: 1px dotted $color-white;
+  &:last-child {
+    border-bottom: 1px dotted $color-white;
+  }
+}
+
+.p-nav__link {
+  position: relative;
+  display: block;
+  padding-top: rm(12);
+  padding-bottom: rm(12);
+  &::after {
+    content: "";
+    background: url(../img/icon-right.png) no-repeat center center/cover;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-100%, -50%);
+    width: rm(14);
+    height: rm(14);
+  }
+
+  img {
+    margin-right: rm(14);
+  }
 }

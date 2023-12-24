@@ -1,5 +1,68 @@
 @use "../global" as *;
 
-.p-header {
- // スタイルをここに記述
+.p-header__bgk {
+  width: 100vw;
+  height: 100vh;
+  background: $sub-color01;
+}
+
+.p-header__inner {
+}
+
+.p-header__title {
+  height: rm(60);
+}
+
+.p-header__hamburger {
+  position: absolute;
+  top: rm(15);
+  right: rm(20);
+  width: 32px;
+  height: 32px;
+}
+
+.p-header__title-logo {
+  width: rm(250);
+  max-width: 100%;
+  margin-top: rm(15);
+}
+
+.p-header__contact-tel {
+  color: $main-color;
+  display: flex;
+  place-items: center;
+  font-size: rm(20);
+  span {
+    font-weight: 700;
+  }
+}
+
+.p-header__contact-time {
+  font-size: rm(10);
+  color: $text-color;
+}
+
+.p-header__contact-reserve-btn {
+  display: flex;
+  align-items: center;
+  background: $main-color;
+  padding: rm(4) rm(14);
+  border-radius: rm(8);
+
+  img {
+    width: rm(46);
+    height: rm(28);
+  }
+}
+
+.p-header__btn-text1 {
+  font-size: rm(16);
+  display: block;
+  text-align: center;
+}
+
+.p-header__btn-text2 {
+  font-size: rm(12);
+  display: block;
+  text-align: center;
 }

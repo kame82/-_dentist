@@ -12,13 +12,15 @@ $link-color: #1592e6; //リンクカラー
 $ff-awesome: "Font Awesome 5 Free", sans-serif; // Font Awesome
 $ff-en: "M PLUS Rounded 1c", sans-serif; // 英字
 $ff-base: "M PLUS Rounded 1c", sans-serif; //日本語
-$fz-base: 16px; // ベースフォントサイズ
+$fz-base: 14px; // ベースフォントサイズ
 $fw-base: 500; // ベースフォントウェイト
-$lh-base: 1.6; // ベース行間
+$lh-base: 1.4; // ベース行間
+$fz-base-pc: 16px; // ベースフォントサイズ
+$lh-base-pc: 1.6; // ベース行間
 
 // レイアウト
-$inner-width: 1200px; // インナー幅サイズ
-$sp-width: 768px; // スマホサイズ
+$inner-width: 1280px; // インナー幅サイズ
+$sp-width: 768; // スマホサイズ
 
 // 重なり順の定義
 $layer: (
