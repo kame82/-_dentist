@@ -1,0 +1,55 @@
+@use "./variables" as *;
+
+// ブレークポイント
+$breakpoints: (
+  // スマホ以下の場合
+  "sp": "screen and (max-width: #{$sp-width - 1px})",
+  // タブレット以下の場合
+  "tab": "screen and (max-width: #{$inner-width - 1px})",
+  // タブレット以上の場合
+  "pc": "screen and (min-width: #{$inner-width})"
+) !default;
+
+// ---
+// メディアクエリー
+// ---
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+/*  scssへ記述  */
+//Figmaの時はこちら ===============
+
+@mixin font($size: null, $weight: null, $height: null, $spacing: null) {
+  @if $size {
+    font-size: calc($size / 16 * 1rem); // ①
+  }
+  @if $weight {
+    font-weight: $weight; // ②
+  }
+  @if $height {
+    line-height: calc($height / $size); // ③
+  }
+  @if $spacing {
+    letter-spacing: calc($spacing / 1000 * 1em); // ④
+  }
+}
+
+/*  scssへ記述  */
+//XDの時はこちら ===============
+// @mixin font($size: null, $height: null, $spacing: null, $weight: null) {
+//   @if $size {
+//     font-size: calc($size / 16 * 1rem); // ①
+//   }
+//   @if $height {
+//     line-height: calc($height / $size); // ②
+//   }
+//   @if $spacing {
+//     letter-spacing: calc($spacing / 1000 * 1em); // ③
+//   }
+//   @if $weight {
+//     font-weight: $weight; // ④
+//   }
+// }

@@ -1,0 +1,19 @@
+@function rm($arg) {
+  @return calc($arg / 16 * 1rem);
+}
+
+@function px($arg) {
+  @return calc($arg * 1px);
+}
+
+/* 
+    _function.scss ファイル
+    それぞれ( )内にpxでの数値を入れるとrem, px, vw(pc版), vw(sp版) に変換 
+    */
+@function vw($arg) {
+  @return calc($arg / $pc-camp * 100vw);
+}
+
+@function vw-sp($arg) {
+  @return calc($arg / $sp-camp * 100vw);
+}

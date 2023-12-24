@@ -1,0 +1,38 @@
+//色
+$main-color: #1391e6; //メインカラー
+$sub-color01: #0060a0;
+$sub-color02: #dff1fd;
+$accent-color: #ee5a6d; //アクセントカラー
+// $accent-color-action: #00aca0; //アクセントカラー(アクティブ)
+$text-color: #393939; //テキストカラー
+$color-white: #ffffff;
+$link-color: #1592e6; //リンクカラー
+
+//フォント
+$ff-awesome: "Font Awesome 5 Free", sans-serif; // Font Awesome
+$ff-en: "M PLUS Rounded 1c", sans-serif; // 英字
+$ff-base: "M PLUS Rounded 1c", sans-serif; //日本語
+$fz-base: 16px; // ベースフォントサイズ
+$fw-base: 500; // ベースフォントウェイト
+$lh-base: 1.6; // ベース行間
+
+// レイアウト
+$inner-width: 1200px; // インナー幅サイズ
+$sp-width: 768px; // スマホサイズ
+
+// 重なり順の定義
+$layer: (
+  // ローディング
+  loading: 300,
+  // モーダル
+  modal: 100,
+  // ドロワー
+  drawer: 40,
+  // フローティング
+  floating: 30,
+  // ヘッダー
+  header: 20,
+  // フッター
+  footer: 10,
+  default: 1
+);

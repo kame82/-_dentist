@@ -1,0 +1,128 @@
+/*================================================================
+Chrome/Firefox/Edge/Safariなど、各ブラウザはそれぞれデフォルトで効くCSSを持っています。
+何もしないと見え方が微妙に変わるので、デフォルトのCSSをリセットして
+ブラウザごとの表示の差異をなくすために書くのが「リセットCSS」です。
+================================================================*/
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+li,
+dt,
+dd,
+p,
+div,
+span,
+img,
+a,
+table,
+tr,
+th,
+td {
+	border: 0;
+	font-size: 100%;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+header,
+footer,
+nav,
+section,
+article,
+main,
+aside,
+figure,
+figcaption {
+	display: block;
+}
+
+ol,
+ul {
+	list-style: none;
+	list-style-type: none;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+a {
+	color: inherit;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+/* 
+    _function.scss ファイル
+    それぞれ( )内にpxでの数値を入れるとrem, px, vw(pc版), vw(sp版) に変換 
+    */
+
+/*  scssへ記述  */
+
+/*  scssへ記述  */
+
+body {
+	color: #393939;
+	font-family: "M PLUS Rounded 1c", sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.6;
+}
+
+body.is-footer-sns-fixed {
+	padding-bottom: 75px;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+a {
+	color: inherit;
+}
+
+.u-separate {
+	margin-bottom: 24px;
+	margin-top: 24px;
+}
+
+@media screen and (min-width: 1200px) {
+
+.u-hidden-pc {
+	display: none;
+}
+
+}
+
+@media screen and (max-width: 767px) {
+
+body.is-footer-sns-fixed {
+	padding-bottom: 67px;
+}
+
+.u-hidden-sp {
+	display: none;
+}
+
+}
+
