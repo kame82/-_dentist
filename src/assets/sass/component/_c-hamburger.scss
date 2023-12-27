@@ -7,12 +7,29 @@
   height: inherit;
   justify-content: center;
   align-items: center;
+}
+.c-hamburger__bar {
+  display: block;
+  width: rm(28);
+  height: rm(3);
+  background: $main-color;
+  border-radius: 8px;
+  transition: all 0.3s ease 0s;
+}
 
-  span {
-    display: block;
-    width: rm(28);
-    height: rm(3);
-    background: $main-color;
-    border-radius: 8px;
-  }
+.c-hamburger__bar1-clicked,
+.c-hamburger__bar2-clicked,
+.c-hamburger__bar3-clicked {
+  background: $color-white;
+}
+
+.c-hamburger__bar1-clicked {
+  transform: rotate(45deg) translateY(rm(12.5));
+}
+.c-hamburger__bar3-clicked {
+  transform: rotate(-45deg) translateY(rm(-12.5));
+}
+
+.c-hamburger__bar2-clicked {
+  opacity: 0;
 }

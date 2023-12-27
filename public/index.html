@@ -17,6 +17,9 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700&display=swap" rel="stylesheet" />
+
+	<!-- swiper -->
+	<link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
 	<!-- CSS -->
 	<link rel="stylesheet" href="./assets/css/style.css" />
 	<!-- wow -->
@@ -25,57 +28,115 @@
 <!-- Contents -->
 
 <body>
-	<!-- header -->
-
+	<!----------------->
+	<!--   header   -->
+	<!----------------->
 	<header class="l-header">
-		<div class="p-header__bgk">
-			<div class="p-header__inner l-inner">
-				<h1 class="p-header__title">
-					<a href="#"><img class="p-header__title-logo" src="./assets/img/logo.png" alt="みなみ歯科クリニック" /></a>
-				</h1>
-				<div class="p-header__hamburger">
-					<a class="c-hamburger">
-						<span></span>
-						<span></span>
-						<span></span>
-					</a>
-				</div>
-				<nav class="p-header__nav p-nav" id="js-nav">
-					<div class="p-nav__inner">
-						<ul class="p-nav__list">
-							<li class="p-nav__item">
-								<a href="#" class="p-nav__link"><img src="./assets/img/home.svg" alt="home" width="24" height="24" />ホーム</a>
-							</li>
-							<li class="p-nav__item">
-								<a href="#" class="p-nav__link"><img src="./assets/img/for-us.svg" alt="for-us" width="24" height="24" />当院について</a>
-							</li>
-							<li class="p-nav__item">
-								<a href="#" class="p-nav__link"><img src="./assets/img/file-text.svg" alt="announce" width="24" height="24" />診療案内</a>
-							</li>
-							<li class="p-nav__item">
-								<a href="#" class="p-nav__link"><img src="./assets/img/people.svg" alt="people" width="24" height="24" />スタッフ紹介</a>
-							</li>
-							<li class="p-nav__item">
-								<a href="#" class="p-nav__link"><img src="./assets/img/edit.svg" alt="blog" width="24" height="24" />スタッフブログ</a>
-							</li>
-							<li class="p-nav__item">
-								<a href="#" class="p-nav__link"><img src="./assets/img/email.svg" alt="blog" width="24" height="24" />お問い合わせ</a>
-							</li>
-						</ul>
-						<div class="l-header__contact-wrapper">
-							<div class="p-header__contact">
-								<div class="p-header__contact-tel"><img src="./assets/img/icon_tel.svg" alt="blog" width="24" height="24" /><span>03-1234-5678</span></div>
-								<div class="p-header__contact-time">(年中無休 AM9:00〜PM22:00)</div>
-							</div>
-							<div class="p-header__contact-reserve-btn"><img src="./assets/img/icon-pc.png" alt="blog" />
-								<p class="p-header__contact-reserve-btn-text"><span class="p-header__btn-text1">WEB予約</span><span class="p-header__btn-text2">はこちら</span></p>
+		<!-- 後で最終化必要 -->
+		<!-- <div class="p-header__bgk"> -->
+		<!-- /後で最終化必要 -->
+		<div class="p-header__inner l-inner">
+			<h1 class="p-header__title">
+				<a href="#"><img class="p-header__title-logo" src="./assets/img/logo.png" alt="みなみ歯科クリニック" /></a>
+			</h1>
+			<div class="p-header__hamburger">
+				<a class="c-hamburger">
+					<!-- 後で最終化必要 -->
+					<!-- <span class="c-hamburger__bar c-hamburger__bar1-clicked"></span>
+              <span class="c-hamburger__bar c-hamburger__bar2-clicked"></span>
+              <span class="c-hamburger__bar c-hamburger__bar3-clicked"></span> -->
+					<!-- /後で最終化必要 -->
+					<span class="c-hamburger__bar"></span>
+					<span class="c-hamburger__bar"></span>
+					<span class="c-hamburger__bar"></span>
+				</a>
+			</div>
+			<!-- 後で最終化必要 -->
+			<!-- <nav class="p-header__nav p-nav" id="js-nav">
+            <div class="p-nav__inner">
+              <ul class="p-nav__list">
+                <li class="p-nav__item">
+                  <a href="#" class="p-nav__link"><img src="./assets/img/home.svg" alt="home" width="24" height="24" />ホーム</a>
+                </li>
+                <li class="p-nav__item">
+                  <a href="#" class="p-nav__link"><img src="./assets/img/for-us.svg" alt="for-us" width="24" height="24" />当院について</a>
+                </li>
+                <li class="p-nav__item">
+                  <a href="#" class="p-nav__link"><img src="./assets/img/file-text.svg" alt="announce" width="24" height="24" />診療案内</a>
+                </li>
+                <li class="p-nav__item">
+                  <a href="#" class="p-nav__link"><img src="./assets/img/people.svg" alt="people" width="24" height="24" />スタッフ紹介</a>
+                </li>
+                <li class="p-nav__item">
+                  <a href="#" class="p-nav__link"><img src="./assets/img/edit.svg" alt="blog" width="24" height="24" />スタッフブログ</a>
+                </li>
+                <li class="p-nav__item">
+                  <a href="#" class="p-nav__link"><img src="./assets/img/email.svg" alt="blog" width="24" height="24" />お問い合わせ</a>
+                </li>
+              </ul>
+              <div class="l-header__contact-wrapper">
+                <div class="p-header__contact">
+                  <div class="p-header__contact-tel"><img src="./assets/img/icon_tel.svg" alt="blog" width="24" height="24" /><span>03-1234-5678</span></div>
+                  <div class="p-header__contact-time">(年中無休 AM9:00〜PM22:00)</div>
+                </div>
+                <div class="p-header__contact-reserve-btn"
+                  ><img src="./assets/img/icon-pc.png" alt="blog" /><p class="p-header__contact-reserve-btn-text"><span class="p-header__btn-text1">WEB予約</span><span class="p-header__btn-text2">はこちら</span></p></div
+                >
+              </div>
+            </div>
+          </nav> -->
+			<!-- /後で最終化必要 -->
+		</div>
+		<!-- </div> -->
+	</header>
+	<!--/ header -->
+
+	<!----------------->
+	<!--   fv   -->
+	<!----------------->
+	<section id="fv">
+		<div class="l-fv l-inner">
+			<!-- Slider main container -->
+			<div class="c-swiper swiper">
+				<!-- Additional required wrapper -->
+				<div class="c-swiper__inner swiper-wrapper">
+					<!-- Slides -->
+					<div class="c-swiper__slide swiper-slide">
+						<div class="p-fv">
+							<div class="p-fv__wrap">
+								<!-- <img class="p-fv__img-1" src="./assets/img/fv_swiper1.jpg" alt="" /> -->
+								<pv class="p-fv__text"><span class="u-dashed">街の皆さまの笑顔を守る</span><br /><span class="u-dashed">アットホームな歯医者さん</span></pv>
 							</div>
 						</div>
 					</div>
-				</nav>
+				</div>
+				<!-- If we need pagination -->
+				<div class="c-swiper__pagination swiper-pagination"></div>
+
+				<!-- If we need navigation buttons -->
+				<div class="c-swiper__button-prev swiper-button-prev"></div>
+				<div class="c-swiper__button-next swiper-button-next"></div>
+			</div>
+			<div class="l-fv__wrapper">
+				<div class="p-fv__medical-time">
+					<img class="p-fv__m-time-img" src="./assets/img/medical-time.png" alt="medical-time" />
+				</div>
+				<div class="p-fv__news">
+					<div class="p-fv__news-title-warp">
+						<h2 class="p-fv__news-title">お知らせ<span class="p-fv__news-title-label">NEWS</span></h2>
+
+						<p class="p-fv__news-title-text"><a href="">過去のお知らせはこちら</a></p>
+					</div>
+					<dl class="p-fv__news-content">
+						<dt class="p-fv__news-content--date">2021/01/01</dt>
+						<dd class="p-fv__news-content--title"><a href="">年末年始の営業時間のお知らせ</a></dd>
+					</dl>
+				</div>
 			</div>
 		</div>
-	</header>
+	</section>
+	<!-- /fv -->
+
 	<!--  -->
 
 	<!--  -->
@@ -87,6 +148,7 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<!-- <script src="./js/wow.min.js"></script> -->
+	<script src="./assets/js/swiper-bundle.min.js"></script>
 	<script src="./assets/js/script.js"></script>
 </body>
 
