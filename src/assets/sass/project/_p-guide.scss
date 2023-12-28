@@ -1,0 +1,65 @@
+@use "../global" as *;
+
+.p-guide__bgk {
+  background: url(../img/main_guide_bg-sp.png) no-repeat top center/100%;
+}
+
+.p-guide__title {
+  padding-top: rm(117);
+}
+
+.p-guide__content-img {
+  border-radius: 20px;
+}
+
+.p-guide__contents {
+  display: flex;
+  flex-direction: column;
+  margin-top: rm(40);
+}
+
+.p-guide__content-warp + .p-guide__content-warp {
+  margin-top: rm(20);
+}
+
+.p-guide__content {
+  position: relative;
+}
+.p-guide__content-textWrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $color-white;
+  text-align: center;
+  width: 100%;
+}
+
+.p-guide__content-title {
+  @include font(20, 700, 20, 1.6);
+}
+
+.p-guide__text {
+  background: $color-white;
+  padding: rm(18) rm(20);
+  line-height: rm(24);
+  margin-top: rm(20);
+}
+
+.p-guide__separateWrap {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.p-guide__separate {
+  width: rm(20);
+  border: 1px solid $color-white;
+
+  margin-top: rm(20);
+  margin-bottom: rm(20);
+}
+
+.p-guide__content-sub {
+  @include font(12, 700, 19, 0.96);
+}

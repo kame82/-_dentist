@@ -1,0 +1,104 @@
+@use "../global" as *;
+
+.p-fv {
+  // スタイルをここに記述
+}
+
+.p-fv__wrap {
+  position: relative;
+  background: url(../img/fv_swiper1_pc.jpg) no-repeat center center / cover;
+  width: 100%;
+  height: rm(447);
+  border-radius: 8px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.p-fv__text {
+  color: $color-white;
+  margin-left: rm(20);
+  position: absolute;
+  bottom: rm(38);
+  left: 0;
+  @include font(20, 700, 40, 1.6);
+  z-index: 2;
+  span {
+    padding-bottom: rm(2);
+  } //   border-bottom: dotted rm(3) $color-white;
+}
+
+.p-fv__m-time-img {
+  margin-top: rm(-20);
+  position: relative;
+  z-index: 2;
+}
+
+.p-fv__news-contents {
+  border-top: 1px solid $text-color;
+  display: block;
+  &:last-child {
+    border-bottom: 1px solid $text-color;
+  }
+}
+
+.p-fv__news-content {
+}
+
+.p-fv__news-title-warp {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding-bottom: rm(6);
+}
+.p-fv__news-title {
+  @include font(20, 700, 20, 1.6);
+  padding-left: rm(15);
+}
+.p-fv__news-title-label {
+  @include font(11, 700, 11, 1.1);
+  color: $main-color;
+  margin-left: rm(16);
+}
+
+.p-fv__news-title-text {
+  @include font(11, 700, 11, 1.1);
+  color: #888888;
+  border-bottom: #888888 rm(1) solid;
+}
+
+.p-fv__news-content {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-bottom: rm(11);
+  padding-top: rm(11);
+  &::after {
+    content: "";
+    background: url(../img/icon-right.svg) no-repeat center center/cover;
+    width: rm(14);
+    height: rm(14);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+}
+
+.p-fv__news-content--date {
+  @include font(12, 500, 12, 1);
+}
+
+.p-fv__news-content--title {
+  padding-left: rm(23);
+  padding-right: rm(20);
+}

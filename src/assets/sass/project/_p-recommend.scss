@@ -1,0 +1,17 @@
+@use "../global" as *;
+
+.p-recommend__contents {
+  padding-inline: rm(30);
+}
+
+.p-recommend__content-img {
+  margin-top: rm(39);
+}
+
+.p-recommend__content-img + .p-recommend__content-img {
+  margin-top: rm(59);
+}
+
+.p-recommend__content-text {
+  margin-top: rm(20);
+}

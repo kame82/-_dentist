@@ -1,0 +1,31 @@
+@use "../global" as *;
+
+.c-section__title {
+  @include font(20, 700, 20, 1.6);
+  text-align: center;
+
+  span {
+    position: relative;
+    &::before {
+      content: "";
+      background: url(../img/Recommend_deco.svg) no-repeat center center/cover;
+      width: rm(49);
+      height: rm(13);
+      position: absolute;
+      top: 50%;
+      right: calc(100% + rm(15));
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      content: "";
+      background: url(../img/Recommend_deco.svg) no-repeat center center/cover;
+      width: rm(49);
+      height: rm(13);
+      position: absolute;
+      top: 50%;
+      left: calc(100% + rm(15));
+      transform: translateY(-50%);
+    }
+  }
+}

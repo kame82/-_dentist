@@ -1,0 +1,11 @@
+@use "../global" as *;
+
+//=====================================
+//    下線（点線）
+//=====================================
+.u-dashed {
+  background-image: linear-gradient(to right, $color-white, $color-white rm(3), transparent rm(2), transparent rm(6));
+  background-size: 8px 2px;
+  background-position: bottom;
+  background-repeat: repeat-x;
+}

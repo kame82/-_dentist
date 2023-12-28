@@ -1,0 +1,22 @@
+@use "../global" as *;
+
+.p-concept__title {
+  color: $main-color;
+
+  @include font(11, 700, 11, 1.1);
+}
+
+.p-concept__mainText {
+  padding-top: rm(14);
+  @include font(20, 700, 32, 1.6);
+}
+
+.p-concept__subText {
+  padding-top: rm(27);
+  line-height: rm(24);
+}
+
+.p-concept__img {
+  padding-top: rm(40);
+  width: calc((355 / 375) * 100%);
+}

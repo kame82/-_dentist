@@ -5,6 +5,8 @@
   margin-inline: auto;
   width: 100%;
   top: 0;
+  background: $color-white;
+  z-index: map-get($layer, header);
 }
 
 .l-header__contact-wrapper {

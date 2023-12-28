@@ -1,0 +1,39 @@
+@use "../global" as *;
+
+.c-concept__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.c-concept__img {
+  order: 2;
+}
+
+.c-concept__text-region {
+  padding-top: rm(100);
+  background: url(../img/concept-bg.png) no-repeat left top/100%;
+}
+
+.c-concept__btn-wrap {
+  text-align: center;
+  margin-top: rm(46);
+}
+
+.c-concept__btn {
+  position: relative;
+  border-radius: 24px;
+  border: 1px solid $main-color;
+  display: inline-block;
+  padding: rm(8) rm(40);
+  color: $main-color;
+  &::after {
+    content: "";
+    position: absolute;
+    background: url(../img/icon-arrow-blue-btn.png) no-repeat center center/cover;
+    top: 50%;
+    transform: translateY(-50%);
+    right: rm(10);
+    width: rm(12);
+    height: rm(12);
+  }
+}
