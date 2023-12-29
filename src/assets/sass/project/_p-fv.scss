@@ -4,12 +4,52 @@
   // スタイルをここに記述
 }
 
-.p-fv__wrap {
+.p-fv__img-1 {
   position: relative;
   background: url(../img/fv_swiper1_pc.jpg) no-repeat center center / cover;
-  width: 100%;
   height: rm(447);
   border-radius: 8px;
+  margin-inline: rm(20);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.p-fv__img-2 {
+  position: relative;
+  background: url(../img/fv_swiper2_sp.jpg) no-repeat center center / cover;
+  height: rm(447);
+  border-radius: 8px;
+  margin-inline: rm(20);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.p-fv__img-3 {
+  position: relative;
+  background: url(../img/fv_swiper3_sp.jpg) no-repeat center center / cover;
+  height: rm(447);
+  border-radius: 8px;
+  margin-inline: rm(20);
 
   &::after {
     content: "";
@@ -26,21 +66,32 @@
 
 .p-fv__text {
   color: $color-white;
-  margin-left: rm(20);
+  margin-left: rm(40);
   position: absolute;
-  bottom: rm(38);
+  bottom: 100%;
   left: 0;
+  transform: translateY(-50%);
   @include font(20, 700, 40, 1.6);
   z-index: 2;
   span {
     padding-bottom: rm(2);
-  } //   border-bottom: dotted rm(3) $color-white;
+  }
+}
+
+.p-fv__medical-time {
+  text-align: center;
 }
 
 .p-fv__m-time-img {
   margin-top: rm(-20);
   position: relative;
   z-index: 2;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.16);
+  border-radius: 12px;
+}
+
+.p-fv__news {
+  margin-top: rm(39);
 }
 
 .p-fv__news-contents {
@@ -73,7 +124,7 @@
 .p-fv__news-title-text {
   @include font(11, 700, 11, 1.1);
   color: #888888;
-  border-bottom: #888888 rm(1) solid;
+  border-bottom: #888888 1px solid;
 }
 
 .p-fv__news-content {

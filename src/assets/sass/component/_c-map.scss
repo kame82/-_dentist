@@ -1,0 +1,116 @@
+@use "../global" as *;
+
+.c-map__bgk {
+  background: $sub-color02;
+}
+
+.c-map__bgk-top {
+  height: rm(32);
+  width: 100%;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* 画像のアスペクト比を保ちながら親要素に合わせます */
+    object-position: top left; /* 画像を右寄せに配置します */
+  }
+}
+
+.c-map__contents {
+  background: $color-white;
+  padding-top: rm(32);
+  padding-bottom: rm(20);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.c-map__logo {
+  padding-inline: rm(13);
+}
+.c-map__address {
+  margin-top: rm(13);
+}
+
+.c-map__tel {
+  margin-top: rm(20);
+  a {
+    position: relative;
+    @include font(32, 700, 36, -0.64);
+    color: $main-color;
+    padding-left: rm(32);
+
+    &::before {
+      content: "";
+      width: rm(28);
+      height: rm(28);
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      transform: translateY(-50%);
+      background: url(../img/icon_tel-blue.svg) no-repeat center center/cover;
+    }
+  }
+}
+
+.c-map__business-time {
+  color: $main-color;
+  margin-top: rm(3);
+  font-size: rm(12);
+}
+
+.c-map__btn-warp {
+  margin-top: rm(20);
+  display: flex;
+  gap: 15;
+  justify-content: space-evenly; //余白等分割
+}
+
+.c-map__btn {
+  text-align: center;
+
+  img {
+    margin-right: rm(8);
+  }
+
+  a {
+    position: relative;
+    border-radius: 24px;
+    border: 1px solid $main-color;
+    color: $main-color;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.c-map__btn1 {
+  img {
+    width: rm(35);
+    height: rm(20);
+  }
+  a {
+    background: $main-color;
+    color: $color-white;
+    padding: rm(8) rm(25);
+  }
+}
+
+.c-map__btn2 {
+  a {
+    padding: rm(8) rm(20);
+  }
+}
+
+.c-map__m-time {
+  margin-top: rm(20);
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.16);
+  border-radius: 12px;
+  margin-inline: rm(10);
+}
+
+.c-map__gMap {
+  margin-top: rm(20);
+  padding-inline: rm(20);
+  iframe {
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
+}

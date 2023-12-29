@@ -1,0 +1,67 @@
+@use "../global" as *;
+
+.c-blog__contents {
+  margin-top: rm(48);
+  display: grid;
+  gap: rm(20);
+}
+
+.c-blog__content {
+  display: flex;
+  width: 100%;
+}
+
+.c-blog__is-new {
+  position: relative;
+  &::after {
+    content: "NEW";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: rm(40);
+    height: rm(40);
+    transform: translate(-25%, -25%);
+    display: grid;
+    place-items: center;
+    @include font(10, 700, 10, 1);
+    color: $color-white;
+    background: url(../img/sircle-pink.svg) no-repeat center center/cover;
+  }
+}
+
+.c-blog__content-img {
+  width: rm(133);
+  height: rm(101);
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 画像のアスペクト比を保ちながら親要素に合わせます */
+    object-position: center center; /* 画像を右寄せに配置します */
+  }
+}
+.c-blog__content-textWrap {
+  width: calc((202 / 375) * 100%);
+  flex: 1;
+  margin-left: rm(10);
+}
+.c-blog__content-label {
+  background: $main-color;
+  display: inline-block;
+  color: $color-white;
+  font-size: rm(10);
+  padding: rm(1) rm(8);
+  border-radius: 10px;
+  margin-top: rm(8);
+}
+
+.c-blog__content-title {
+  margin-top: rm(6);
+}
+
+.c-blog__content-time {
+  margin-top: rm(6);
+  color: #888;
+  font-size: rm(11);
+}

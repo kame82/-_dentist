@@ -1,0 +1,35 @@
+@use "../global" as *;
+
+.c-footer_bgk {
+  background: $sub-color02;
+}
+
+.c-footer__linkLists {
+  @include font(16, 700, 16, 1);
+}
+
+.c-footer__link {
+  &:not(:first-child) {
+    margin-top: rm(38);
+  }
+}
+
+.c-footer__linkList-item {
+  margin-top: rm(18);
+  a {
+    img {
+      margin-right: rm(6);
+    }
+  }
+}
+
+.c-footer__linkList-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  width: fit-content;
+}
+
+.c-footer__copy {
+  text-align: center;
+  color: $color-white;
+}

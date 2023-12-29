@@ -1,0 +1,7 @@
+@use "../global" as *;
+
+.c-toTop {
+  position: fixed;
+  bottom: rm(97);
+  right: rm(10);
+}

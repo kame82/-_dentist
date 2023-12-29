@@ -1,5 +1,50 @@
 @use "../global" as *;
 
-.c-swiper {
- // スタイルをここに記述
+.swiper-button-prev {
+  width: rm(32);
+  height: rm(32);
+  &::after {
+    content: "";
+    background: url(../img/arrow-left.svg) no-repeat center center/cover;
+    position: absolute;
+    top: 50%;
+    left: -12%;
+    transform: translateY(-50%);
+    width: rm(32);
+    height: rm(32);
+  }
+}
+
+.swiper-button-next {
+  width: rm(32);
+  height: rm(32);
+  &::after {
+    content: "";
+    background: url(../img/arrow-right.svg) no-repeat center center/cover;
+    position: absolute;
+    top: 50%;
+    right: -12%;
+    transform: translateY(-50%);
+    width: rm(36);
+    height: rm(36);
+  }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  width: fit-content;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: var(--swiper-pagination-bottom, 20px);
+  left: -12px;
+}
+
+.swiper-pagination {
+  transform: rotate(90deg);
 }
