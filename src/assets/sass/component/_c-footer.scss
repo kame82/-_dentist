@@ -4,6 +4,14 @@
   background: $sub-color02;
 }
 
+.c-footer__link-wrap {
+  @include mq(pc) {
+    display: flex;
+    gap: rm(40);
+    justify-content: center;
+  }
+}
+
 .c-footer__linkLists {
   @include font(16, 700, 16, 1);
 }
@@ -11,6 +19,12 @@
 .c-footer__link {
   &:not(:first-child) {
     margin-top: rm(38);
+  }
+
+  @include mq(pc) {
+    &:not(:first-child) {
+      margin-top: rm(0);
+    }
   }
 }
 
@@ -32,4 +46,8 @@
 .c-footer__copy {
   text-align: center;
   color: $color-white;
+
+  @include mq(pc) {
+    @include font(14, 500, 14, 1);
+  }
 }

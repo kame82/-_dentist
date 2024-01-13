@@ -3,10 +3,18 @@
 .l-footer {
   width: 100%;
   padding-bottom: rm(60);
+
+  @include mq(pc) {
+    padding-inline: rm(140);
+  }
 }
 
 .l-footer__bottom {
   background: $main-color;
   padding-top: rm(18);
   padding-bottom: rm(73);
+
+  @include mq(pc) {
+    padding-bottom: rm(18);
+  }
 }

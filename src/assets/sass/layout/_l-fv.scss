@@ -4,7 +4,10 @@
   width: 100%;
   margin-top: rm(60);
   padding-bottom: rm(60);
-  padding-top: 15px;
+  padding-top: rm(15);
+  @include mq(pc) {
+    padding-top: rm(40);
+  }
 }
 
 .l-fv__wrapper {

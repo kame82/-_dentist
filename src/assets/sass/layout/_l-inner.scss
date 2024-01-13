@@ -5,6 +5,22 @@
   width: 100%;
   max-width: $inner-width;
   margin-inline: auto;
+
+  @include mq(pc) {
+    padding-inline: rm(140);
+  }
+}
+
+.l-inner__header {
+  padding-inline: rm(20);
+  width: 100%;
+  max-width: $inner-width;
+  margin-inline: auto;
+
+  @include mq(pc) {
+    position: relative;
+    padding-inline: rm(40);
+  }
 }
 
 .l-inner__fv {

@@ -21,13 +21,35 @@
   padding-bottom: rm(20);
   border-radius: 8px;
   text-align: center;
+
+  @include mq(pc) {
+    display: flex;
+    gap: rm(40);
+    padding: rm(40) rm(49);
+  }
+}
+
+.c-map__content {
+  @include mq(pc) {
+    flex: 7;
+  }
 }
 
 .c-map__logo {
   padding-inline: rm(13);
+
+  img {
+    @include mq(pc) {
+      max-width: 90%;
+    }
+  }
 }
 .c-map__address {
   margin-top: rm(13);
+
+  @include mq(pc) {
+    @include font(14, 500, 14, 1);
+  }
 }
 
 .c-map__tel {
@@ -55,17 +77,32 @@
   color: $main-color;
   margin-top: rm(3);
   font-size: rm(12);
+
+  @include mq(pc) {
+    margin-top: rm(-3);
+  }
 }
 
 .c-map__btn-warp {
   margin-top: rm(20);
   display: flex;
-  gap: 15;
+  gap: rm(15);
   justify-content: space-evenly; //余白等分割
+  padding-inline: rm(20);
+
+  @include mq(pc) {
+    justify-content: center;
+    margin-top: rm(19);
+  }
 }
 
 .c-map__btn {
   text-align: center;
+  flex: 1;
+
+  @include mq(pc) {
+    max-width: rm(200);
+  }
 
   img {
     margin-right: rm(8);
@@ -78,6 +115,7 @@
     color: $main-color;
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 }
 
@@ -89,13 +127,19 @@
   a {
     background: $main-color;
     color: $color-white;
-    padding: rm(8) rm(25);
+    padding: rm(8) rm(0);
+    @include mq(pc) {
+      padding: rm(10) 0;
+    }
   }
 }
 
 .c-map__btn2 {
   a {
-    padding: rm(8) rm(20);
+    padding: rm(8) rm(0);
+    @include mq(pc) {
+      padding: rm(10) 0;
+    }
   }
 }
 
@@ -109,6 +153,12 @@
 .c-map__gMap {
   margin-top: rm(20);
   padding-inline: rm(20);
+
+  @include mq(pc) {
+    flex: 5;
+    padding-inline: 0;
+  }
+
   iframe {
     width: 100%;
     aspect-ratio: 1/1;

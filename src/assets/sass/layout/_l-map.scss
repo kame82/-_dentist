@@ -4,4 +4,9 @@
   width: 100%;
   padding-bottom: rm(59);
   padding-inline: rm(10);
+
+  @include mq(pc) {
+    padding-inline: rm(140);
+    padding-top: rm(56);
+  }
 }

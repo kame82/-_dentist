@@ -7,6 +7,10 @@
 }
 
 .p-header__inner {
+  @include mq(pc) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .p-header__title {
@@ -19,6 +23,10 @@
   right: rm(20);
   width: 32px;
   height: 32px;
+
+  @include mq(pc) {
+    display: none;
+  }
 }
 
 .p-header__title-logo {
@@ -27,16 +35,37 @@
   margin-top: rm(15);
 }
 
+.p-header__contact {
+  @include mq(pc) {
+    margin-left: rm(32);
+    text-align: center;
+  }
+}
+
 .p-header__contact-tel {
   color: $main-color;
   display: flex;
   place-items: center;
   font-size: rm(20);
+
+  @include mq(pc) {
+    font-size: rm(28);
+  }
+
+  span {
+    @include mq(pc) {
+      @include font(32, 700, 32, -0.64);
+    }
+  }
 }
 
 .p-header__contact-time {
   font-size: rm(10);
   color: $text-color;
+
+  @include mq(pc) {
+    display: inline-block;
+  }
 }
 
 .p-header__contact-reserve-btn {

@@ -17,8 +17,8 @@
     width: rm(32);
     height: rm(32);
     @include mq(pc) {
-      width: rm(42);
-      height: rm(42);
+      width: rm(48);
+      height: rm(48);
     }
   }
 }
@@ -27,8 +27,8 @@
   width: rm(32);
   height: rm(32);
   @include mq(pc) {
-    width: rm(42);
-    height: rm(42);
+    width: rm(48);
+    height: rm(48);
   }
   &::after {
     content: "";
@@ -40,8 +40,8 @@
     width: rm(32);
     height: rm(32);
     @include mq(pc) {
-      width: rm(42);
-      height: rm(42);
+      width: rm(48);
+      height: rm(48);
     }
   }
 }

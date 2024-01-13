@@ -4,6 +4,7 @@
   padding-inline: rm(30);
   @include mq(pc) {
     display: flex;
+    gap: rm(60);
   }
 }
 

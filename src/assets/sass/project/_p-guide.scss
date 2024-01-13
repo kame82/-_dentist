@@ -2,24 +2,44 @@
 
 .p-guide__bgk {
   background: url(../img/main_guide_bg-sp.png) no-repeat top center/100%;
+  @include mq(pc) {
+    background: url(../img/main_guide_bg.png) no-repeat top center/100% 100%;
+  }
 }
 
 .p-guide__title {
   padding-top: rm(117);
+  @include mq(pc) {
+    padding-top: rm(200);
+  }
+}
+
+.p-guide__content-wrap {
 }
 
 .p-guide__content-img {
   border-radius: 20px;
+  position: relative;
 }
 
 .p-guide__contents {
   display: flex;
   flex-direction: column;
   margin-top: rm(40);
+
+  @include mq(pc) {
+    flex-direction: row;
+    margin-top: rm(60);
+  }
 }
 
 .p-guide__content-warp + .p-guide__content-warp {
   margin-top: rm(20);
+
+  @include mq(pc) {
+    margin-top: 0;
+    margin-left: rm(80);
+  }
 }
 
 .p-guide__content {
@@ -37,6 +57,10 @@
 
 .p-guide__content-title {
   @include font(20, 700, 20, 1.6);
+
+  @include mq(pc) {
+    @include font(28, 700, 28, 2.24);
+  }
 }
 
 .p-guide__text {
@@ -44,6 +68,11 @@
   padding: rm(18) rm(20);
   line-height: rm(24);
   margin-top: rm(20);
+
+  @include mq(pc) {
+    margin-top: rm(60);
+    @include font(14, 500, 28, 1);
+  }
 }
 
 .p-guide__separateWrap {
@@ -55,11 +84,18 @@
 .p-guide__separate {
   width: rm(20);
   border: 1px solid $color-white;
-
   margin-top: rm(20);
   margin-bottom: rm(20);
+
+  @include mq(pc) {
+    width: rm(40);
+  }
 }
 
 .p-guide__content-sub {
   @include font(12, 700, 19, 0.96);
+
+  @include mq(pc) {
+    @include font(16, 700, 28, 1.28);
+  }
 }

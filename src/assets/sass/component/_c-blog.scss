@@ -4,11 +4,24 @@
   margin-top: rm(48);
   display: grid;
   gap: rm(20);
+
+  @include mq(pc) {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: rm(50);
+    margin-top: rm(80);
+  }
 }
 
 .c-blog__content {
   display: flex;
   width: 100%;
+
+  @include mq(pc) {
+    display: block;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+  }
 }
 
 .c-blog__is-new {
@@ -26,6 +39,11 @@
     @include font(10, 700, 10, 1);
     color: $color-white;
     background: url(../img/sircle-pink.svg) no-repeat center center/cover;
+
+    @include mq(pc) {
+      width: rm(60);
+      height: rm(60);
+    }
   }
 }
 
@@ -33,6 +51,12 @@
   width: rm(133);
   height: rm(101);
   overflow: hidden;
+
+  @include mq(pc) {
+    width: fit-content;
+    height: fit-content;
+    border-radius: 20px 20px 0 0;
+  }
 
   img {
     width: 100%;
@@ -44,7 +68,13 @@
 .c-blog__content-textWrap {
   width: calc((202 / 375) * 100%);
   flex: 1;
-  margin-left: rm(10);
+  padding-left: rm(10);
+  @include mq(pc) {
+    position: relative;
+    width: 100%;
+    padding-inline: rm(24);
+    padding-bottom: rm(12);
+  }
 }
 .c-blog__content-label {
   background: $main-color;
@@ -54,14 +84,32 @@
   padding: rm(1) rm(8);
   border-radius: 10px;
   margin-top: rm(8);
+  @include mq(pc) {
+    position: absolute;
+    margin-top: 0;
+    top: rm(-31);
+  }
 }
 
 .c-blog__content-title {
   margin-top: rm(6);
+  @include mq(pc) {
+    width: fit-content;
+    margin-top: rm(23);
+  }
 }
 
 .c-blog__content-time {
-  margin-top: rm(6);
-  color: #888;
-  font-size: rm(11);
+  line-height: 0.9;
+  time {
+    margin-top: rm(3);
+    color: #888;
+    font-size: rm(11);
+    line-height: inherit;
+  }
+}
+
+.c-blog__btn-warp {
+  text-align: center;
+  margin-top: rm(46);
 }

@@ -21,4 +21,13 @@
   justify-content: space-around;
   background: rgba(255, 255, 255, 0.85);
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+
+  @include mq(pc) {
+    background: transparent;
+    display: inline-block;
+    height: auto;
+    width: auto;
+    position: static;
+    box-shadow: none;
+  }
 }

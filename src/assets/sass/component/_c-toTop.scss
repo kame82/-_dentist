@@ -4,4 +4,10 @@
   position: fixed;
   bottom: rm(97);
   right: rm(10);
+
+  @include mq(pc) {
+    bottom: rm(40);
+    right: rm(20);
+    width: rm(52);
+  }
 }

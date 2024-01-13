@@ -3,4 +3,7 @@
 .l-blog {
   width: 100%;
   padding-bottom: rm(100);
+  @include mq(pc) {
+    padding-top: rm(158);
+  }
 }
