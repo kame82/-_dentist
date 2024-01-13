@@ -2,6 +2,13 @@
 
 .p-recommend__contents {
   padding-inline: rm(30);
+  @include mq(pc) {
+    display: flex;
+  }
+}
+
+.p-recommend__content {
+  flex: 1;
 }
 
 .p-recommend__content-img {

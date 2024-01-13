@@ -3,4 +3,8 @@
 .l-concept {
   width: 100%;
   padding-bottom: rm(98);
+
+  @include mq(pc) {
+    padding-inline: 0;
+  }
 }

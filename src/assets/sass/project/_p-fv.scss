@@ -6,10 +6,14 @@
 
 .p-fv__img-1 {
   position: relative;
-  background: url(../img/fv_swiper1_pc.jpg) no-repeat center center / cover;
+  background: url(../img/fv_swiper1_sp.jpg) no-repeat center center / cover;
   height: rm(447);
   border-radius: 8px;
   margin-inline: rm(20);
+
+  @include mq(pc) {
+    background: url(../img/fv_swiper1.jpg) no-repeat center center / cover;
+  }
 
   &::after {
     content: "";
@@ -31,6 +35,10 @@
   border-radius: 8px;
   margin-inline: rm(20);
 
+  @include mq(pc) {
+    background: url(../img/fv_swiper2.jpg) no-repeat center center / cover;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -51,6 +59,10 @@
   border-radius: 8px;
   margin-inline: rm(20);
 
+  @include mq(pc) {
+    background: url(../img/fv_swiper3.jpg) no-repeat center center / cover;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -61,6 +73,14 @@
     background: rgba(0, 0, 0, 0.1);
     width: 100%;
     height: 100%;
+  }
+}
+
+.p-fv__flexWrap {
+  @include mq(pc) {
+    display: flex;
+    margin-inline: rm(40);
+    gap: rm(40);
   }
 }
 
@@ -76,10 +96,19 @@
   span {
     padding-bottom: rm(2);
   }
+
+  @include mq(pc) {
+    @include font(32, 700, 54, 2.56);
+    margin-left: rm(62);
+  }
 }
 
 .p-fv__medical-time {
   text-align: center;
+  @include mq(pc) {
+    order: 2;
+    flex: 1;
+  }
 }
 
 .p-fv__m-time-img {
@@ -88,10 +117,24 @@
   z-index: 2;
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.16);
   border-radius: 12px;
+
+  @include mq(pc) {
+    margin-top: rm(-30);
+  }
+}
+
+.p-fv__newsWrap {
+  @include mq(pc) {
+    flex: 1;
+  }
 }
 
 .p-fv__news {
   margin-top: rm(39);
+
+  @include mq(pc) {
+    margin-top: rm(18);
+  }
 }
 
 .p-fv__news-contents {

@@ -2,21 +2,41 @@
 
 .p-concept__title {
   color: $main-color;
-
   @include font(11, 700, 11, 1.1);
+
+  @include mq(pc) {
+    @include font(14, 700, 14, 1.4);
+  }
 }
 
 .p-concept__mainText {
   padding-top: rm(14);
   @include font(20, 700, 32, 1.6);
+
+  @include mq(pc) {
+    @include font(28, 700, 44, 2.24);
+  }
 }
 
 .p-concept__subText {
   padding-top: rm(27);
   line-height: rm(24);
+
+  @include mq(pc) {
+    @include font(14, 500, 24, 1);
+  }
 }
 
 .p-concept__img {
   padding-top: rm(40);
   width: calc((355 / 375) * 100%);
+  border-radius: 0 20px 20px 0;
+
+  @include mq(pc) {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    padding-top: 0;
+    margin-top: rm(90);
+  }
 }

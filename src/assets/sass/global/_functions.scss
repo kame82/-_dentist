@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 @function rm($arg) {
   @return calc($arg / 16 * 1rem);
 }

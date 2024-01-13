@@ -3,7 +3,6 @@
 body {
   color: $text-color;
   font-family: $ff-base;
-  font-size: $fz-base;
   font-weight: $fw-base;
   line-height: $lh-base;
 
@@ -15,7 +14,6 @@ body {
   //   }
   // }
   @include mq(pc) {
-    font-size: $fz-base-pc;
     line-height: $lh-base-pc;
   }
 }
@@ -31,6 +29,10 @@ a {
 
 //仮指定
 * {
+  font-size: $fz-base;
+  @include mq(pc) {
+    font-size: $fz-base-pc;
+  }
   // background: #0060a0;
   // outline: 1px solid red;
 }

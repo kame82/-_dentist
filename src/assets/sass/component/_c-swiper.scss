@@ -3,6 +3,10 @@
 .swiper-button-prev {
   width: rm(32);
   height: rm(32);
+  @include mq(pc) {
+    width: rm(42);
+    height: rm(42);
+  }
   &::after {
     content: "";
     background: url(../img/arrow-left.svg) no-repeat center center/cover;
@@ -12,12 +16,20 @@
     transform: translateY(-50%);
     width: rm(32);
     height: rm(32);
+    @include mq(pc) {
+      width: rm(42);
+      height: rm(42);
+    }
   }
 }
 
 .swiper-button-next {
   width: rm(32);
   height: rm(32);
+  @include mq(pc) {
+    width: rm(42);
+    height: rm(42);
+  }
   &::after {
     content: "";
     background: url(../img/arrow-right.svg) no-repeat center center/cover;
@@ -25,8 +37,12 @@
     top: 50%;
     right: -12%;
     transform: translateY(-50%);
-    width: rm(36);
-    height: rm(36);
+    width: rm(32);
+    height: rm(32);
+    @include mq(pc) {
+      width: rm(42);
+      height: rm(42);
+    }
   }
 }
 

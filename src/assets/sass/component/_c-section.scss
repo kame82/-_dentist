@@ -4,6 +4,10 @@
   @include font(20, 700, 20, 1.6);
   text-align: center;
 
+  @include mq(pc) {
+    @include font(28, 700, 28, 2.24);
+  }
+
   span {
     position: relative;
     &::before {

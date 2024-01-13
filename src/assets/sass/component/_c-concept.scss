@@ -3,20 +3,50 @@
 .c-concept__content {
   display: flex;
   flex-direction: column;
+
+  @include mq(pc) {
+    flex-direction: row;
+  }
 }
 
 .c-concept__img {
   order: 2;
+
+  @include mq(pc) {
+    order: 1;
+    flex: 2;
+    width: 100%;
+    display: grid;
+    align-items: center;
+  }
+}
+
+.c-concept__text {
+  padding-top: rm(100);
+  background: url(../img/concept-bg.png) no-repeat left top/100%;
+
+  @include mq(pc) {
+    order: 2;
+    flex: 3;
+    margin-left: -15%;
+    padding-top: vw(230);
+    padding-bottom: vw(160);
+  }
 }
 
 .c-concept__text-region {
-  padding-top: rm(100);
-  background: url(../img/concept-bg.png) no-repeat left top/100%;
+  @include mq(pc) {
+    margin-left: 30%;
+    margin-right: rm(150);
+  }
 }
 
 .c-concept__btn-wrap {
   text-align: center;
   margin-top: rm(46);
+  @include mq(pc) {
+    text-align: left;
+  }
 }
 
 .c-concept__btn {

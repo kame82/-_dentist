@@ -6,3 +6,12 @@
   max-width: $inner-width;
   margin-inline: auto;
 }
+
+.l-inner__fv {
+  width: 100%;
+  max-width: $inner-width;
+  margin-inline: auto;
+  @include mq(pc) {
+    padding-inline: rm(40);
+  }
+}
