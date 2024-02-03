@@ -21,6 +21,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
     "postcss": "^8.4.32",
+    "postcss-url": "^10.1.3",
     "sass": "^1.69.5"
   },
   "brouserslist": [

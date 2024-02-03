@@ -24,3 +24,12 @@ const swiper = new Swiper(".swiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+//drawer menu
+$(".c-hamburger").on("click", function () {
+  $("#js-nav, #js-navBgk").toggleClass("p-nav__isHide");
+  $("#js-nav__menu1").toggleClass("c-hamburger__bar1-clicked");
+  $("#js-nav__menu2").toggleClass("c-hamburger__bar2-clicked");
+  $("#js-nav__menu3").toggleClass("c-hamburger__bar3-clicked");
+  return false;
+});

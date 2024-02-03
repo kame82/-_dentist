@@ -10,6 +10,7 @@ const browserSync = require("browser-sync");
 const cleanCss = require("gulp-clean-css");
 const uglify = require("gulp-uglify");
 const rename = require("gulp-rename");
+const postcssUrl = require("postcss-url");
 
 const htmlBeautify = require("gulp-html-beautify");
 
@@ -21,6 +22,18 @@ function compileSass() {
       .pipe(sass()) //sass->cssのコンパイル
       .pipe(postcss([autoprefixer(), cssSorter({ outputStyle: "compressed" })])) //autoprefixer, css序列の設定
       .pipe(mmq()) //メディアクエリの一括化
+      .pipe(
+        //SCSS画像URLの最適化
+        postcss([
+          postcssUrl({
+            // ここでURLの変換を行います
+            url: (asset) => {
+              // URLのパスから `../../` を `../` に変換します
+              return asset.url.replace(/\.\.\/\.\.\/\i\m\g/g, "../img");
+            },
+          }),
+        ])
+      )
       .pipe(gulp.dest("./public/assets/css")) //出力先
       .pipe(cleanCss()) //CSSの圧縮
       .pipe(
